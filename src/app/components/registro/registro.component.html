@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Registro</h1>
+    <form #registroForm="ngForm">
+        <label>Id Usuario</label>
+        <input type="number" name="cajaid" #cajaid class="form-control"/>
+        <label>Nombre</label>
+        <input type="text" name="cajanombre" #cajanombre class="form-control"/>
+        <label>Email</label>
+        <input type="text" name="cajaemail" #cajaemail class="form-control"/>
+        <label>Contraseña</label>
+        <input type="password" name="cajapassword" #cajapassword class="form-control"/>
+        <br/>
+        <button class="btn btn-primary" (click)="insertarUsuario()">Registrarse</button>
+    </form>
+    <div *ngIf="status === true">
+        <p class="text-success">
+            {{mensaje}}
+        </p>
+    </div>
+</div>

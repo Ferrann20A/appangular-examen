@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Login</h1>
+    <br/>
+        <form class="mx-auto d-block" #loginForm="ngForm" style="width: 40%;">
+            <label>User</label>
+            <input type="text" #cajauser name="cajauser" class="form-control"/>
+            <label>Password</label>
+            <input type="password" #cajapassword name="cajapassword" class="form-control"/><br/>
+            <button (click)="getToken()" class="btn btn-primary">Login</button>
+        </form>
+        <br/>
+        <div class="mx-auto d-block" *ngIf="status === true">
+            <p class="text-success">{{mensaje}}</p>
+        </div>
+        <div class="mx-auto d-block" *ngIf="status === false">
+            <p class="text-danger">No estas logeado, no tienes acceso a los apartados con seguridad</p>
+        </div>
+</div>
